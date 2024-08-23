@@ -7,7 +7,11 @@ import javax.swing.JOptionPane;
 public class Menú {
     String platos[];
     int datos[][];
+    String dias[] = new String []{"Lunes", "Martes","Miércoles","Jueves","Viernes","Sábado"};
     
+    /*que aparesca un listado de analítica con: cantidad de tipo de platos vendidos a la semana, dia de la semana que más y menos se vendió de ese plato,
+    dia de la semana que más y menos se vende y 5 estadísticas adicionales.
+    */
     
     public void createMenu (int cantidad){
         platos = new String[cantidad];
