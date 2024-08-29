@@ -92,20 +92,22 @@ public class Ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void createActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createActionPerformed
-        ObjMenu.createMenu(Integer.parseInt(JOptionPane.showInputDialog("¿Cuántos platos quiere añadir?")));
+        ObjMenu.createMenu(validateIntInput(JOptionPane.showInputDialog("¿Cuántos platos quiere añadir?")));
         search.setEnabled(true);
     }//GEN-LAST:event_createActionPerformed
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         ObjMenu.searchMenu();
+        into.setEnabled(true);
     }//GEN-LAST:event_searchActionPerformed
 
     private void intoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_intoActionPerformed
         ObjMenu.intoDatos();
+        analyze.setEnabled(true);
     }//GEN-LAST:event_intoActionPerformed
 
     private void analyzeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyzeActionPerformed
-
+        ObjMenu.analyzeInfo();
     }//GEN-LAST:event_analyzeActionPerformed
 
     public static void main(String args[]) {
@@ -115,6 +117,25 @@ public class Ventana extends javax.swing.JFrame {
                 new Ventana().setVisible(true);
             }
         });
+    }
+    
+    public int validateIntInput(String str) {
+        while (isNumber(str)==false) {
+            str = JOptionPane.showInputDialog("Ingrese un número ENTERO válido (sin espacios):");
+        }
+        return Integer.parseInt(str);
+    }
+    
+    public static boolean isNumber(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
