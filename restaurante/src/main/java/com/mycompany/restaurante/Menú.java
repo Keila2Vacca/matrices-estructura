@@ -36,10 +36,10 @@ public class Menú {
     }
     
    public void intoDatos(){
-      datos = new int[6][platos.length]; 
+      datos = new int[6][arrayObjetos.length]; 
       dias = new String []{"Lunes", "Martes","Miércoles","Jueves","Viernes","Sábado"};
        for (int dia = 0; dia < 6; dia++) {
-           for (int plato = 0; plato < platos.length; plato++) {
+           for (int plato = 0; plato < arrayObjetos.length; plato++) {
                datos[dia][plato] = validateIntInput(JOptionPane.showInputDialog(null, "Ventas para el día: " + dias[dia] + "Plato: " + platos[platos]));
            }
        }
