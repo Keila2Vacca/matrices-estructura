@@ -86,7 +86,7 @@ public class Menú {
         returnString += "· El plato menos vendido fue: " + arrayObjetos[findMinIndex(ventasPlato)].getName() + " con " + ventasPlato[findMinIndex(ventasPlato)] + " ventas esta semana" + "\n\n";
         
        
-    
+    }
     
 
     private int findMaxIndex(int[] array) {
