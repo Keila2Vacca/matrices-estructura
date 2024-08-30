@@ -4,6 +4,7 @@ package com.mycompany.restaurante;
 public class Platos {
     private int price;
     private String name;
+    private int basePrice;
 
     public int getPrice() {
         return price;
@@ -20,5 +21,13 @@ public class Platos {
     public void setName(String name) {
         this.name = name;
     }
- 
+
+    public int getBasePrice() {
+        return basePrice;
+    }
+
+    public void setBasePrice(int basePrice) {
+        this.basePrice = basePrice;
+    }
+    
 }
